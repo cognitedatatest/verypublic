@@ -1,0 +1,9 @@
+version: 1
+services:
+  - name: "verypublic"
+    pipelines:
+      - name: "aks"
+        cluster_selection_rules:
+          - description: "AKS clusters"
+            expression: "vendor:aks"
+        manifest_template_command: ["cat", "manifest.yaml"]
